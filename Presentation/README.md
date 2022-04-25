@@ -102,7 +102,6 @@ If something is conspicuous, it has a feature that is stronger than the feature 
 In this picture, we can find two different feature: Intensity and Orientation. They can be seen as Intensity space and Orientation space.
 When they both do the normalize, there is a obvious pick in orientation space. This pick is the attribute we want.
 
-
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links](https://i.imgur.com/j2zS4R8.png)
 
 
@@ -118,26 +117,23 @@ In computer science, the feature can be controlled by weight. In the left pictur
 ### 4. Application
 The Visual saliency can apply on many computer visual. there are some application:
 
-<br>
 
 #### Auto-detection
 With visual salincy, we can find the military vehicles in a savanna easily.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience](https://i.imgur.com/cKPMTAn.png)
 
-<br>
 
 #### Auto-driver
 The recently year, It widely applys on auto-driver. the saliency can detect the edge of the road and help the driver.
-
-<br>
-
 
 ![fig.from http://www.scholarpedia.org/article/Visual_salience](https://i.imgur.com/aSQmgMS.png)
 
 <br>
 
 #### Medical image
-It also can be applied in medical images. In the below image, there is a tumor in mammograms, which is not easy to be detected without background knowledge, but the computer can detect and label it with a heat map. 
+It also can be applied in medical images. In the below image, there is a tumor in mammograms, which is not easy to be detected without background knowledge, but the computer can detect and label it with a heat map.
+
 ![fig.from https://www.itnonline.com/content/ai-assisted-radiologists-can-detect-more-breast-cancer-reduced-false-positive-recall](https://i.imgur.com/IgaZxK9.png)
 
 <br>
@@ -146,15 +142,6 @@ It also can be applied in medical images. In the below image, there is a tumor i
 #### Auto image cuting
 Visual saliency also can crop the image. The different size of monitor is a big problem for people to watch video or image. If we use a small screen to watch a large image, since the size of image, the key area we want to watch will become small. With visual saliency, we can crop the region we want to focus on, and the scene will not become deformed.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 ![fig.from http://www.scholarpedia.org/article/Visual_salience](https://i.imgur.com/vbiqkay.png)
 
 <br>
@@ -162,25 +149,16 @@ Visual saliency also can crop the image. The different size of monitor is a big 
 
 #### Explainable AI
 Visual Saliency also can help the data science to realize the model. Convolutional neural networks (CNNs) have led to great improvement in computer vision. But what things do the model pay attention to have always bothered practitioners. We can use the saliency to find the focal point in the image.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links](https://i.imgur.com/QDnns3s.png)
 
-<br>
-<br>
+
 
 ## B. Computer Vision Method
 ### 1. Static Salieny
 
 This class of saliency detection algorithms relies on image features and statistics to localize the most interesting regions of an image
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ![fig.from https://www.pyimagesearch.com/2018/07/16/opencv-saliency-detection](https://i.imgur.com/Zal5FyP.jpg)
 
@@ -189,10 +167,10 @@ This class of saliency detection algorithms relies on image features and statist
 #### Method 1. StaticSaliencySpectralResidual
 The OpenCV implements two methods for static saliency detection.First method is StaticSaliencySpectralResidual, unlike the general model is to transform the saliency problem into the problem of detecting the special properties of the target, such as some color features, brightness features, texture features, etc, it focus on the background. They observe whether the background of most pictures satisfies any changes in a certain space. Finally, if the background is removed, the prominent part of the picture will be find.
 
-<br>
 
 #### Method 2. StaticSaliencyFineGrained
 The second method to implement static saliency is StaticSaliencyFineGrained, this method calculates the significance based on the center-surround differences of spatial scale and Gaussian Pyramid.
+
 ![fig.from https://www.researchgate.net/figure/Procedure-for-computing-saliency-maps-for-videos_fig1_220744935](https://i.imgur.com/EUC2QMT.png)
 
 
@@ -211,10 +189,6 @@ Commonly used image pyramids include Gaussian Pyramid and Laplacian Pyramid.
 ### 2. Motion Saliency
 This class of detection algorithms they use in motion saliency is typically rely on video or frame-by-frame inputs, the base idea of this is based on the motion background subtraction method to achieve saliency area detection, and the motion saliency algorithms process the frames, keeping track of objects which is moving.The object that move is considered salient.
 
-<br>
-<br>
-<br>
-<br>
 
 ![fig.from https://www.youtube.com/watch?v=tBaKusWUp3s](https://i.imgur.com/hw8FYjC.gif)
 
@@ -234,6 +208,7 @@ Deconvolution uses an unsupervised method to find a set of kernels and feature m
 
 #### Method 1. Guided Backpropagation
 The Guided Backpropagation is one of the deconvolution methods,the steps of the guided backpropagation approach using a deconvoluntion net is like this. First, we have a high-level feature map and The deconvoluntion net inverts the data flow to the CNN. This data inversion flows from the current neuron activations to the image that we input.After the above step, only a single neuron is non-zero in the high level feature map.And the final reconstructed image shows the parts of the input image that highly activates the neuron. This is the discriminative part of the image for the neuron.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links](https://i.imgur.com/JFgfFBM.jpg)
 
 Both of deconvoluntion net and guided backpropagation use feature map to back-propagate gradients, which are not sensitive to categories and have no category discrimination. The difference between the two methods is that they have different gradient processing strategies.
@@ -246,6 +221,7 @@ The second method of deconvlution network is Class Activation Mapping (CAM).The 
 Then, we think in reverse, the pixel array after GAP will be multiplied by the weight w. The larger value of the weight w, which means the greater the influence of the image represented by the pixel. And since w refers to the degree of importance that each feature map can be divided into target, it is better to multiply the pixels of the entire feature map by the weight w and then superimpose it, so that you can focus on different areas according to the importance of each feature map . The larger weight w corresponding to the classification, the greater the influence of the feature map; on the contrary, the feature map with the weight closer to 0 is less important.
 
 The disadvantage of CAM is that if the last layer of neural network does not use GAP (Global Average Pooling), the model structure must be modified.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/tE3ohCc.png)
 
@@ -253,6 +229,7 @@ The disadvantage of CAM is that if the last layer of neural network does not use
 
 - **Application**
 CAM can show the parts that CNN cares about when classifying cat and dog.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/47WQ02X.png)
 
