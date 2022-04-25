@@ -39,6 +39,7 @@
 Visual saliency is the distinct subjective perceptual quality. It can make some items in the world stand out from their neighbors and immediately grab our attention. In ancient times, virsual asliency help animals to detect the most important thing for live. It is affected by the past experiments, interests, or habits. 
 
 In the modern, we can get some visual saliency experience by education. For example, the below, since we know when the front car's brake light is bright, the front car will break. We also break our car. The brake light is the most saliency region in our sight.
+
 ![fig.from https://medium.com/analytics-vidhya/visual-saliency-for-object-detection-308b188865b6](https://i.imgur.com/K9QbqND.jpg)
 
 By the up example, we know that it is important to rapidly detect visual saliency in a cluttered visual world. However, simultaneously identifying any and all interesting targets in one's visual field has prohibitive computational complexity. One solution is to restrict complex object recognition process to a small area or a few objects at any one time.
@@ -53,6 +54,7 @@ Since we don't realize the human brain, it hard to conpute the visual saliency a
 
 - #### Color
 One item in the array of items strongly pops-out and effortlessly and immediately attracts attention. In this example, the red bar is very easy to be detected. Many studies have suggested that no scanning occurs in simple displays like this, it means that attention is immediately drawn to the salient item, no matter how many other distractors are present in the display. 
+
 ![fig.from fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/ahSPrlA.jpg)
 
@@ -60,6 +62,7 @@ One item in the array of items strongly pops-out and effortlessly and immediatel
 
 - #### Direction
 In this display, the vertical bar is visually salient. Orientation is also the conspicuous point. We can find the different bar in the picture even throught that all bar color are same.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/C2usned.jpg)
 
@@ -69,6 +72,7 @@ In this display, the vertical bar is visually salient. Orientation is also the c
 In the nature, a moving thing is more dangerous than still ones, so our brain can find the different moving actions easily.
 In this gif image, if it can diplay, we can easily find the point in the red circle moving faster than others.
 Not only the moving speed but also the moving direction is attractive.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/BFkmxtG.png)
 
@@ -77,6 +81,7 @@ Not only the moving speed but also the moving direction is attractive.
 - #### Combin with shape and color
 In natural environments, highly salient objects tend to automatically draw attention towards them. The perceptual salience is computed automatically, effortlessly, and in real-time. 
 Designers have long relied on their salience system to create objects, such as this emergency triangle, which would also appear highly salient to others in a wide range of viewing conditions.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links
 ](https://i.imgur.com/CE1Ti7a.jpg)
 
@@ -86,6 +91,7 @@ Designers have long relied on their salience system to create objects, such as t
 But how can people find the saliency? The basic principle behind computing salience is the detection of locations whose local visual attributes is significantly different from the surrounding image attributes. The attributes are along some Features or combination of Features. And we can look upon those features  as different dimansions.
 
 This significant difference could be in a number of simple visual feature dimensions which are believed to be represented in the early stages of cortical visual processing: edge orientation、 motion direction or color.
+
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links](https://i.imgur.com/LQVhck3.png)
 
 <br>
@@ -96,12 +102,9 @@ If something is conspicuous, it has a feature that is stronger than the feature 
 In this picture, we can find two different feature: Intensity and Orientation. They can be seen as Intensity space and Orientation space.
 When they both do the normalize, there is a obvious pick in orientation space. This pick is the attribute we want.
 
-<br>
-<br>
 
 ![fig.from http://www.scholarpedia.org/article/Visual_salience#External_Links](https://i.imgur.com/j2zS4R8.png)
 
-<div style="page-break-after: always;"></div>
 
 #### Top-down modulation by task demands
 In computer science, the feature can be controlled by weight. In the left picture, there are many different dimensions and the dimension of orientation is significant. We can give this dimension a larger weight, so there is a significant pick in the final sum. And the pick is the saliency place which we want.
